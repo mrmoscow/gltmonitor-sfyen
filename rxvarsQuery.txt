@@ -1,0 +1,109 @@
+obscon@gltobscon:~$ value-Rx -v power_4_9_caba4_lhc
+-2.377265e+01
+obscon@gltobscon:~$ value-Rx -v power_4_9_caba4_rhc
+-2.215828e+01
+obscon@gltobscon:~$ value-Rx -v power_4_9_caba5_rhc
+-1.744422e+18
+obscon@gltobscon:~$ value-Rx -v power_4_9_caba5_lhc
+-1.744422e+18
+obscon@gltobscon:~$ value-Rx -v pwr_caba4_timestamp
+200226_203832
+obscon@gltobscon:~$ value-Rx -v pwr_caba5_timestamp
+x���o
+obscon@gltobscon:~$ value-Rx -v rf_synth_freq
+18742125000.000000
+obscon@gltobscon:~$ value-Rx -v rf_synth_power
+-1.179000e+01
+obscon@gltobscon:~$ value-Rx -v rf_final_lo
+225.000000
+obscon@gltobscon:~$ value-Rx -v rf_caba1_receiver
+Rx2
+obscon@gltobscon:~$ value-Rx -v rf_caba1_toneval
+0
+obscon@gltobscon:~$ value-Rx -v rf_caba1_tone
+Rx2/////////////
+obscon@gltobscon:~$ value-Rx -v rf_caba1_valon
+0
+obscon@gltobscon:~$ value-Rx -v rf_caba1_valon_lock
+3.2/////////////
+obscon@gltobscon:~$ value-Rx -v rf_caba1_floog_lock
+4.8
+obscon@gltobscon:~$ value-Rx -v rf_caba11_receiver
+Rx1
+obscon@gltobscon:~$ value-Rx -v rf_caba11_pol
+LHC
+obscon@gltobscon:~$ value-Rx -v rf_caba11_sb
+USB
+obscon@gltobscon:~$ value-Rx -v rf_caba11_cont
+USB
+obscon@gltobscon:~$ value-Rx -v rf_caba11_595G
+5.0
+obscon@gltobscon:~$ value-Rx -v rf_caba3_attlevel
+45
+obscon@gltobscon:~$ value-Rx -v rf_caba4_receiver
+x��
+obscon@gltobscon:~$ value-Rx -v rf_caba5_receiver
+x���
+obscon@gltobscon:~$ value-Rx -v rf_caba4 vgagain_lhc
+This variable does not exist.
+obscon@gltobscon:~$ value-Rx -v rf_caba4_vgagain_lhc
+-1.744422e+18
+obscon@gltobscon:~$ value-Rx -v rf_caba4_vgagain_rhc
+-1.744422e+18
+obscon@gltobscon:~$ value-Rx -v rf_caba5_vgagain_rhc
+
+
+-1.744422e+18
+obscon@gltobscon:~$ value-Rx -v rf_caba5_vgagain_lhc
+-1.744422e+18
+obscon@gltobscon:~$ value-Rx -v rf_cryostat_coldhead
+3.483000
+obscon@gltobscon:~$ value-Rx -v rf_cryostat_plate4k
+3.983000
+obscon@gltobscon:~$ value-Rx -v rf_cryostat_plate15K
+17.003000
+obscon@gltobscon:~$ value-Rx -v rf_cryostat_plate100
+104.599998
+obscon@gltobscon:~$ value-Rx -v rf_cryostat_ambient
+280.209991
+obscon@gltobscon:~$ value-Rx -v rf_loadval
+x���o
+obscon@gltobscon:~$ value-Rx -v rf_timestamp
+20200226_154249
+DSM_POWER_4_9_CABA4_LHC_F       # LHC power measurements for the 4-9 GHz IF from CABA4
+  DSM_POWER_4_9_CABA4_RHC_F       # RHC power measurements for the 4-9 GHz IF from CABA4
+  DSM_POWER_4_9_CABA5_LHC_F       # LHC power measurements for the 4-9 GHz IF from CABA5
+  DSM_POWER_4_9_CABA5_RHC_F       # LHC power measurements for the 4-9 GHz IF from CABA5
+  DSM_PWR_CABA4_TIMESTAMP_C15
+  DSM_PWR_CABA5_TIMESTAMP_C15
+  # below added on 181221
+  DSM_RF_SYNTH_FREQ_D               # Synthesizer Frequency
+  DSM_RF_SYNTH_POWER_D              # Synthesizer Power
+  DSM_RF_FINAL_LO_D                 # Final LO based on First LO Value and receiver selection in CABA1
+  DSM_RF_CABA1_RECEIVER_C3          # Receiver Selected for CABA1 (Rx1, Rx2, Rx3)
+  DSM_RF_CABA1_TONEVAL_C1           # Tone On/Off (1/0)
+  DSM_RF_CABA1_TONE_C3              # Tone channel (Rx1, Rx2, Rx3)
+  DSM_RF_CABA1_VALON_C1             # Valon Frequency (0.5G/1.5G) 
+  DSM_RF_CABA1_VALON_LOCK_C3        # Valon lock voltage (0v is no lock, 3.5V is lock)
+  DSM_RF_CABA1_FLOOG_LOCK_C3        # FLOOG lock voltage (0v is no lock, 5V is lock)  
+  DSM_RF_CABA11_RECEIVER_C3         # Receiver Selected for CABA11 (Rx1, Rx2, Rx3)
+  DSM_RF_CABA11_POL_C3              # Which Pol selected (LHC/RHC)
+  DSM_RF_CABA11_SB_C3               # Which sideband selected (LSB/USB)
+  DSM_RF_CABA11_CONT_C3             # Which sideband selected for the continuum detector (LSB/USB)
+  DSM_RF_CABA11_595G_C3             # 5.95G lock voltage (0v is no lock, 5V is lock)
+  DSM_RF_CABA3_ATTLEVEL_C3          # Attenuation level of CABA3 
+  DSM_RF_CABA4_RECEIVER_C3          # Receiver Selected for CABA4 (Rx1, Rx2, Rx3)
+  DSM_RF_CABA5_RECEIVER_C3          # Receiver Selected for CABA5 (Rx1, Rx2, Rx3)
+  DSM_RF_CABA4_VGAGAIN_LHC_F        # USB IF Servo VGA gain setting for LHC
+  DSM_RF_CABA4_VGAGAIN_RHC_F        # USB IF Servo VGA gain setting for RHC
+  DSM_RF_CABA5_VGAGAIN_LHC_F        # LSB IF Servo VGA gain setting for LHC
+  DSM_RF_CABA5_VGAGAIN_RHC_F        # LSB IF Servo VGA gain setting for RHC
+  DSM_RF_CRYOSTAT_COLDHEAD_F        # Cryostat Coldhead Temp
+  DSM_RF_CRYOSTAT_PLATE4K_F         # Cryostat Plate4K Temp
+  DSM_RF_CRYOSTAT_PLATE15K_F        # Cryostat Plate15K Temp
+  DSM_RF_CRYOSTAT_PLATE100_F        # Cryostat Plate100K Temp
+  DSM_RF_CRYOSTAT_AMBIENT_F         # Cryostat Ambient Temp
+  DSM_RF_LOADVAL_C10                # Position of Load Motor
+  DSM_RF_TIMESTAMP_C15              # Timestamp
+
+
