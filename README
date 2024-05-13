@@ -1,0 +1,10 @@
+The code for acuMonitor executable is in gltacc under acuCommands. This
+program needs to run on obscon and not acc since the metrology data is
+available only to glttrack- on control and not monitor port. These are
+read from dsm (written by glttrack). The dsm reading works only on obscon.
+
+
+
+====2024,May====
+by SFYen, commit all *.c and *.h, Make files,  into git (github).
+Will start to update the r page in gltmonitor
