@@ -57,7 +57,7 @@ void receiversPage(int count) {
 
   move(0,0);
   system_time=time(NULL);
-  move(1,5);
+  move(1,10);
   printw("Receivers data at time: %s ",ctime(&system_time));
 
 
@@ -105,132 +105,77 @@ void receiversPage(int count) {
   printf("Warning: DSM read failed! dsm_status=%d\n",dsm_status);
   }
 
-  move(3,48);
-  printw("--------- Cryostat -----------");
-  move(4,48);
-  printw("| Coldhead temp.:     %4.1f K |",rfCryostatColdhead);
-  move(5,48);
-  printw("| 4K Plate temp.:     %4.1f K |",rfCryostatPlate4K);
-  move(6,48);
-  printw("| 15K Plate temp.:    %4.1f K |",rfCryostatPlate15K);
-  move(7,48);
-  printw("| 100K Plate temp.:  %4.1f K |",rfCryostatPlate100);
-  move(8,48);
-  printw("| Ambient temp.:     %4.1f K |",rfCryostatAmbTemp);
-  move(9,48);
-  printw("------------------------------");
 
   move(3,2);
-  printw("--------- Tuning -----------------------");
+  printw("============== Tuning ==============");
   move(4,2);
-  printw("| Synth. Freq. (Hz):    %12.2f |",rfSynthFreq);
+  printw("Synth. Freq. (Hz):    %12.2f",rfSynthFreq);
   move(5,2);
-  printw("| Synth. Power (dBm):   %12.6f   |",rfSynthPower);
+  printw("Synth. Power (dBm):   %12.6f",rfSynthPower);
   move(6,2);
-  printw("| Final LO Freq. (GHz):  %12.6f  |",rfFinalLO);
-  move(7,2);
-  printw("----------------------------------------");
+  printw("WCA_Locked Freq(GHz): %12.6f",rfFinalLO);
 
+
+  move(9,2);
+  printw("========== Signal select ===========");
   move(10,2);
-  printw("---CAB-A1---");
+  printw("Receiver: %s",rfCaba1Rcvr);
   move(11,2);
-  printw("Rcvr: %s",rfCaba1Rcvr);
+  printw("Sideband(for Tsys/Cont.Det ): %s",rfCaba1Toneval);
   move(12,2);
-  printw("Tone val: %s",rfCaba1Toneval);
-/*
-  switch(atoi(rfCaba1Toneval)) {
-     case '0':
-     printw("Tone: OFF");
-     break;
-     case '1':
-     printw("Tone: ON");
-     break;
-  }
-*/
-  move(13,2);
-  printw("Tone channel: %s",rfCaba1Tone);
+  printw("Polarization(for Phase monitor): %s",rfCaba1Toneval);
+
+
   move(14,2);
-  printw("Valon Freq: %s",rfCaba1Valon);
-/*
-  switch(atoi(rfCaba1Valon)) {
-     case '0':
-     printw("Valon Freq: 0.5GHz");
-     break;
-     case '1':
-     printw("Valon Freq: 1.5GHz");
-     break;
-  }
-*/
+  printw("======== Tone & Load Motor =========");
   move(15,2);
-  printw("Valon Lock V: %s (V)",rfCaba1ValonLock);
-/*
-  if(volts < 0.5) {
-       standout();
-       printw(" UNLOCKED");
-       standend();
-  }
-  if(volts > 3.0) printw(" LOCKED");
-*/
+  printw("Tone Source: %s",rfCaba1Rcvr);
   move(16,2);
-  printw("(0V: no Lock, 3V: Lock)");
+  printw("Tone Position: %s",rfCaba1Toneval);
+  move(17,2);
+  printw("LHC_Cont. Powwer(mv): %s",rfCaba1Toneval);
   move(18,2);
-  printw("Floog Lock V: %s (V)",rfCaba1FloogLock);
-/*
-  if(atof(rfCaba1FloogLock) < 0.5) {
-        standout();
-        printw(" UNLOCKED");
-        standend();
-  }
-  if(atof(rfCaba1FloogLock) > 4.5) printw(" LOCKED");
-*/
+  printw("RHC_Cont. Powwer(mv): %s",rfCaba1Toneval);
   move(19,2);
-  printw("(0V: no Lock, 5V: Lock)");
+  printw("PM#5_RHC/POL0(dBm) %s",rfCaba1Toneval);
   move(20,2);
-  printw("----------");
-  
-  move(10,28);
-  printw("---CAB-A3---");
-  move(11,28);
-  printw("Attenuation (dB): %s",rfCaba3AttLevel);
+  printw("PM#5_LHC/POL1(dBm) %s",rfCaba1Toneval);
 
-  move(24,2);
-  printw("---CAB-A44---");
-  move(25,2);
-  printw("Rcvr: %s  AA",rfCaba4Rcvr);
-  move(26,2);
-  if(abs(power_4_9_caba4_lhc)>1.0e5) {printw("4-9 GHz IF Power LHC (dBm): wacko");}
-  else printw("4-9 GHz IF Power LHC (dBm): %.2f",power_4_9_caba4_lhc);
-  move(27,2);
-  if(abs(power_4_9_caba4_rhc)>1.0e5) {printw("4-9 GHz IF Power RHC (dBm): wacko");}
-  else printw("4-9 GHz IF Power RHC (dBm): %.2f",power_4_9_caba4_rhc);
-  move(28,2);
-  if(abs(rfCaba4VGAgain_lhc)>1.0e5) {printw("VGA gain LHC (dB): wacko");}
-  else printw("VGA gain LHC (dB): %f",rfCaba4VGAgain_lhc);
-  move(29,2);
-  if(abs(rfCaba4VGAgain_rhc)>1.0e5) {printw("VGA gain RHC (dB): wacko");}
-  else printw("VGA gain RHC (dB): %f",rfCaba4VGAgain_rhc);
 
-  move(24,40);
-  printw("---CAB-A45---");
-  move(25,40);
-  printw("Rcvr: %s",rfCaba5Rcvr);
-  move(26,40);
-  if(abs(power_4_9_caba5_lhc)>1.0e5) {printw("4-9 GHz IF Power LHC (dBm): wacko");}
-  else printw("4-9 GHz IF Power LHC (dBm): %.2f",power_4_9_caba5_lhc);
-  move(27,40);
-  if(abs(power_4_9_caba5_rhc)>1.0e5) {printw("4-9 GHz IF Power RHC (dBm): wacko");}
-  else printw("4-9 GHz IF Power RHC (dBm): %.2f",power_4_9_caba5_rhc);
-  move(28,40);
-  if(abs(rfCaba5VGAgain_lhc)>1.0e5) {printw("VGA gain LHC (dB): wacko");}
-  else printw("VGA gain LHC (dB): %f",rfCaba5VGAgain_lhc);
-  move(29,40);
-  if(abs(rfCaba5VGAgain_rhc)>1.0e5) {printw("VGA gain RHC (dB): wacko");}
-  else printw("VGA gain RHC (dB): %f",rfCaba5VGAgain_rhc);
- 
-  move(15,55);
-  printw("Position of Load Motor:");
-  move(16,60);
-  printw("%s",rfLoadval);
+  move(3,46);
+  printw("====== Temp and Vacuum ======");
+  move(4,46);
+  printw("Coldhead(K) :    %4.1f ",rfCryostatColdhead);
+  move(5,46);
+  printw("4K_temp(K)  :    %4.1f ",rfCryostatPlate4K);
+  move(6,46);
+  printw("15K_temp(K) :    %4.1f ",rfCryostatPlate15K);
+  move(7,46);
+  printw("100K_temp(K):    %4.1f ",rfCryostatPlate100);
+  move(8,46);
+  printw("Ambient(K)  :    %4.1f ",rfCryostatAmbTemp);
+  move(9,46);
+  printw("Dewar_pressure:  %4.1f",rfCryostatAmbTemp);
+  move(10,46);
+  printw("Pump_pressure :  %4.1f",rfCryostatAmbTemp);
+
+  move(13,46);
+  printw("====== Various LO Status =======");
+  move(14,46);
+  printw("10MHz (5V Lock):  %s ",rfCaba1FloogLock);
+  move(15,46);
+  printw("31.5MHz_FLOOG (5V Lock): %s",rfCaba1FloogLock);
+  move(16,46);
+  printw("0.5/1.5GHz_Valon(3.5V lock): %s",rfCaba1ValonLock);
+  move(17,46);
+  printw("2.048GHz(5V Lock): %s",rfCaba1FloogLock);
+  move(18,46);
+  printw("3.85 GHz(5V Lock): %s",rfCaba1FloogLock);
+  move(19,46);
+  printw("8.15 GHz(5V Lock): %s",rfCaba1FloogLock);
+  move(20,46);
+  printw("5.95 GHz(5V Lock): %s",rfCaba1FloogLock);
+
 
   refresh();
 }
