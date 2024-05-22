@@ -107,14 +107,20 @@ void receiversPage(int count) {
 
 
   move(3,2);
-  printw("============== Tuning ==============");
+  printBold("============== Tuning ==============");
   move(4,2);
-  printw("Synth. Freq. (Hz):    %12.2f",rfSynthFreq);
+  printLabel("Synth. Freq. (Hz):    ");printw("%12.2f",rfSynthFreq);
+  /*printw("Synth. Freq. (Hz):    %12.2f",rfSynthFreq); */
   move(5,2);
-  printw("Synth. Power (dBm):   %12.6f",rfSynthPower);
+  printLabel("Synth. Power (dBm):  ");printw("%12.6f",rfSynthPower);
+  /*printw("Synth. Power (dBm):   %12.6f",rfSynthPower); */
   move(6,2);
   printw("WCA_Locked Freq(GHz): %12.6f",rfFinalLO);
 
+  move(7,2);
+  printHighlighted("==Test==");printAlt(" ==AltTest==");
+  move(8,2);
+  printDisabled("DisTest");printEnabled("EnTest");printBright("BriTest");
 
   move(9,2);
   printw("========== Signal select ===========");
