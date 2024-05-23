@@ -117,7 +117,7 @@ void receiversPage(int count) {
   move(6,2);
   printLabel("WCA_Locked Freq(GHz): ");printw("%12.6f",rfFinalLO);
   move(7,2);
-  printLabel("LO_PAD(63 is Max att):  ")
+  printLabel("LO_PAD(63 is Max att):  ");
 
   move(9,2);
   printBold("========== Signal select ===========");
@@ -148,9 +148,9 @@ void receiversPage(int count) {
   move(3,46);
   printAlt("====== Temp and Vacuum ======");
   move(4,46);
-  printLab("Coldhead(K) :    ");printw("%4.1f",rfCryostatColdhead);
+  printLabel("Coldhead(K) :    ");printw("%4.1f",rfCryostatColdhead);
   move(5,46);
-  printLab("4K_temp(K)  :    ");printw("%4.1f",rfCryostatPlate4K);
+  printLabel("4K_temp(K)  :    ");printw("%4.1f",rfCryostatPlate4K);
   move(6,46);
   printw("15K_temp(K) :    %4.1f ",rfCryostatPlate15K);
   move(7,46);
