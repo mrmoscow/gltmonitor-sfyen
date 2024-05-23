@@ -118,32 +118,32 @@ void receiversPage(int count) {
   move(6,2);
   printLabel("WCA_Locked Freq(GHz): ");printw("%12.6f",rfFinalLO);
   move(7,2);
-  printLabel("LO_PAD(63 is Max att):  ");printw("%s",rfCaba3AttLevel)
+  printLabel("LO_PAD(63 is Max att):  ");printw("%s",rfCaba3AttLevel);
 
   move(9,2);
   printBold("========== Signal select ===========");
   move(10,2);
   printLabel("Receiver: ");printw("%s",rfCaba1Rcvr);
   move(11,2);
-  printw("Sideband(for Tsys/Cont.Det ): %s",rfCaba11Sb);
+  printLabel("Sideband(for Tsys/Cont.Det ): ");printw("%s",rfCaba11Sb);
   move(12,2);
-  printw("Polarization(for Phase monitor): %s",rfCaba11Pol);
+  printLabel("Polarization(for Phase monitor): ");printw("%s",rfCaba11Pol);
 
 
-  move(14,2);
-  printBold("======== Tone & Load Motor =========");
   move(15,2);
-  printw("Tone Source: %s",rfCaba1Rcvr);
+  printBold("======== Tone & Load Motor =========");
   move(16,2);
-  printw("Tone Position: %s",rfCaba1Toneval);
+  printLabel("Tone Source: ");printw("%s",rfCaba1Rcvr);
   move(17,2);
-  printw("LHC_Cont. Powwer(mv): %s",rfCaba1Toneval);
+  printLabel("Tone Position: ");printw("%s",rfCaba1Toneval);
   move(18,2);
-  printw("RHC_Cont. Powwer(mv): %s",wacko);
+  printw("LHC_Cont. Powwer(mv): ");printw("%s",wacko);
   move(19,2);
-  printw("PM#5_RHC/POL0(dBm) %s",wacko);
+  printw("RHC_Cont. Powwer(mv): ");printw("%s",wacko);
   move(20,2);
-  printw("PM#5_LHC/POL1(dBm) %s",wacko);
+  printw("PM#5_RHC/POL0(dBm) ");printw("%s",wacko);
+  move(21,2);
+  printw("PM#5_LHC/POL1(dBm) ");printw("%s",wacko);
 
 
   move(3,46);
@@ -163,22 +163,26 @@ void receiversPage(int count) {
   move(10,46);
   printLabel("Pump_pressure :  ");printw("%s",wacko);
 
-  move(13,46);
+  move(12,46);
   printBold("====== Various LO Status =======");
+  move(13,46);
+  printLabel("PhotonicsRx_10MHz:  ");printw("%s",wacko);
   move(14,46);
-  printw("10MHz (5V Lock):  %s ",rfCaba1FloogLock);
+  printw("A1-31.5MHz_FLOOG (5V Lock): %s",rfCaba1FloogLock);
   move(15,46);
-  printw("31.5MHz_FLOOG (5V Lock): %s",rfCaba1FloogLock);
+  printw("A1-0.5/1.5GHz_Valon(3.5V lock): %s",rfCaba1ValonLock);
   move(16,46);
-  printw("0.5/1.5GHz_Valon(3.5V lock): %s",rfCaba1ValonLock);
+  printw("Backend_Ref_2.048GHz(5V Lock): %s",rfCaba1FloogLock);
   move(17,46);
-  printw("2.048GHz(5V Lock): %s",rfCaba1FloogLock);
+  printw("Backend_Ref_3.85 GHz(5V Lock): %s",rfCaba1FloogLock);
   move(18,46);
-  printw("3.85 GHz(5V Lock): %s",rfCaba1FloogLock);
+  printw("Backend_Ref_8.15 GHz(5V Lock): %s",rfCaba1FloogLock);
   move(19,46);
-  printw("8.15 GHz(5V Lock): %s",rfCaba1FloogLock);
+  printw("A11-5.95 GHz(5V Lock): %s",rfCaba1FloogLock);
   move(20,46);
-  printw("5.95 GHz(5V Lock): %s",rfCaba1FloogLock);
+  printw("PhotonicsTx_15.75GHz %s",wacko);
+  move(21,46);
+  printw("PhotonicsTx_15.76GHz %s",wacko);
 
   refresh();
 }
