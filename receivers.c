@@ -44,6 +44,7 @@ void receiversPage(int count) {
   char rfCaba5Rcvr[3];
   char rfLoadval[10];
   char rfTimestamp[15];
+  char *wacko="wacko";
 
   if ((count % 20) == 1) {
     /*
@@ -142,7 +143,7 @@ void receiversPage(int count) {
   move(19,2);
   printw("PM#5_RHC/POL0(dBm) %s",rfCaba1Toneval);
   move(20,2);
-  printw("PM#5_LHC/POL1(dBm) %s",rfCaba1Toneval);
+  printw("PM#5_LHC/POL1(dBm) %s",wacko);
 
 
   move(3,46);
