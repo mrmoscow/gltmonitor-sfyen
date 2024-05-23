@@ -99,8 +99,8 @@ void receiversPage(int count) {
   dsm_status = dsm_read(DSM_HOST,"DSM_RF_CRYOSTAT_AMBIENT_F",&rfCryostatAmbTemp,&timestamp);
 
   dsm_status = dsm_read(DSM_HOST,"DSM_RF_LOADVAL_C10",&rfLoadval,&timestamp);
-
   dsm_status = dsm_read(DSM_HOST,"DSM_RF_TIMESTAMP_C15",rfTimestamp,&timestamp);
+
 
   if (dsm_status != DSM_SUCCESS) {
   printf("Warning: DSM read failed! dsm_status=%d\n",dsm_status);
@@ -118,16 +118,16 @@ void receiversPage(int count) {
   move(6,2);
   printLabel("WCA_Locked Freq(GHz): ");printw("%12.6f",rfFinalLO);
   move(7,2);
-  printLabel("LO_PAD(63 is Max att):  ");
+  printLabel("LO_PAD(63 is Max att):  ");printw("%s",rfCaba3AttLevel)
 
   move(9,2);
   printBold("========== Signal select ===========");
   move(10,2);
   printLabel("Receiver: ");printw("%s",rfCaba1Rcvr);
   move(11,2);
-  printw("Sideband(for Tsys/Cont.Det ): %s",rfCaba1Toneval);
+  printw("Sideband(for Tsys/Cont.Det ): %s",rfCaba11Sb);
   move(12,2);
-  printw("Polarization(for Phase monitor): %s",rfCaba1Toneval);
+  printw("Polarization(for Phase monitor): %s",rfCaba11Pol);
 
 
   move(14,2);
@@ -139,32 +139,32 @@ void receiversPage(int count) {
   move(17,2);
   printw("LHC_Cont. Powwer(mv): %s",rfCaba1Toneval);
   move(18,2);
-  printw("RHC_Cont. Powwer(mv): %s",rfCaba1Toneval);
+  printw("RHC_Cont. Powwer(mv): %s",wacko);
   move(19,2);
-  printw("PM#5_RHC/POL0(dBm) %s",rfCaba1Toneval);
+  printw("PM#5_RHC/POL0(dBm) %s",wacko);
   move(20,2);
   printw("PM#5_LHC/POL1(dBm) %s",wacko);
 
 
   move(3,46);
-  printAlt("====== Temp and Vacuum ======");
+  printBold("====== Temp and Vacuum ======");
   move(4,46);
   printLabel("Coldhead(K) :    ");printw("%4.1f",rfCryostatColdhead);
   move(5,46);
   printLabel("4K_temp(K)  :    ");printw("%4.1f",rfCryostatPlate4K);
   move(6,46);
-  printw("15K_temp(K) :    %4.1f ",rfCryostatPlate15K);
+  printLabel("15K_temp(K) :    ");printw("%4.1f",rfCryostatPlate15K);
   move(7,46);
-  printw("100K_temp(K):    %4.1f ",rfCryostatPlate100);
+  printLabel("100K_temp(K):    ");printw("%4.1f",rfCryostatPlate100);
   move(8,46);
-  printw("Ambient(K)  :    %4.1f ",rfCryostatAmbTemp);
+  printLabel("Ambient(K)  :    ");printw("%4.1f",rfCryostatAmbTemp);
   move(9,46);
-  printw("Dewar_pressure:  %4.1f",rfCryostatAmbTemp);
+  printLabel("Dewar_pressure:  ");printw("%s",wacko);
   move(10,46);
-  printw("Pump_pressure :  %4.1f",rfCryostatAmbTemp);
+  printLabel("Pump_pressure :  ");printw("%s",wacko);
 
   move(13,46);
-  printAlt("====== Various LO Status =======");
+  printBold("====== Various LO Status =======");
   move(14,46);
   printw("10MHz (5V Lock):  %s ",rfCaba1FloogLock);
   move(15,46);
