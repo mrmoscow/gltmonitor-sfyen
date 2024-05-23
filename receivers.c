@@ -115,17 +115,14 @@ void receiversPage(int count) {
   printLabel("Synth. Power (dBm):  ");printw("%12.6f",rfSynthPower);
   /*printw("Synth. Power (dBm):   %12.6f",rfSynthPower); */
   move(6,2);
-  printw("WCA_Locked Freq(GHz): %12.6f",rfFinalLO);
-
+  printLabel("WCA_Locked Freq(GHz): ");printw("%12.6f",rfFinalLO);
   move(7,2);
-  printHighlighted("==Test==");printAlt(" ==AltTest==");
-  move(8,2);
-  printDisabled("DisTest");printEnabled("EnTest");printBright("BriTest");
+  printLabel("LO_PAD(63 is Max att):  ")
 
   move(9,2);
-  printw("========== Signal select ===========");
+  printBold("========== Signal select ===========");
   move(10,2);
-  printw("Receiver: %s",rfCaba1Rcvr);
+  printLabel("Receiver: ");printw("%s",rfCaba1Rcvr);
   move(11,2);
   printw("Sideband(for Tsys/Cont.Det ): %s",rfCaba1Toneval);
   move(12,2);
@@ -133,7 +130,7 @@ void receiversPage(int count) {
 
 
   move(14,2);
-  printw("======== Tone & Load Motor =========");
+  printBold("======== Tone & Load Motor =========");
   move(15,2);
   printw("Tone Source: %s",rfCaba1Rcvr);
   move(16,2);
@@ -149,11 +146,11 @@ void receiversPage(int count) {
 
 
   move(3,46);
-  printw("====== Temp and Vacuum ======");
+  printAlt("====== Temp and Vacuum ======");
   move(4,46);
-  printw("Coldhead(K) :    %4.1f ",rfCryostatColdhead);
+  printLab("Coldhead(K) :    ");printw("%4.1f",rfCryostatColdhead);
   move(5,46);
-  printw("4K_temp(K)  :    %4.1f ",rfCryostatPlate4K);
+  printLab("4K_temp(K)  :    ");printw("%4.1f",rfCryostatPlate4K);
   move(6,46);
   printw("15K_temp(K) :    %4.1f ",rfCryostatPlate15K);
   move(7,46);
@@ -166,7 +163,7 @@ void receiversPage(int count) {
   printw("Pump_pressure :  %4.1f",rfCryostatAmbTemp);
 
   move(13,46);
-  printw("====== Various LO Status =======");
+  printAlt("====== Various LO Status =======");
   move(14,46);
   printw("10MHz (5V Lock):  %s ",rfCaba1FloogLock);
   move(15,46);
@@ -181,7 +178,6 @@ void receiversPage(int count) {
   printw("8.15 GHz(5V Lock): %s",rfCaba1FloogLock);
   move(20,46);
   printw("5.95 GHz(5V Lock): %s",rfCaba1FloogLock);
-
 
   refresh();
 }
