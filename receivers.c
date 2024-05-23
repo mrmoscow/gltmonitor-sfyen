@@ -107,81 +107,81 @@ void receiversPage(int count) {
   }
 
 
-  move(3,2);
+  move(3,1);
   printBold("============== Tuning ==============");
-  move(4,2);
+  move(4,1);
   printLabel("Synth. Freq. (Hz):    ");printw("%12.2f",rfSynthFreq);
   /*printw("Synth. Freq. (Hz):    %12.2f",rfSynthFreq); */
-  move(5,2);
+  move(5,1);
   printLabel("Synth. Power (dBm):  ");printw("%12.6f",rfSynthPower);
   /*printw("Synth. Power (dBm):   %12.6f",rfSynthPower); */
-  move(6,2);
+  move(6,1);
   printLabel("WCA_Locked Freq(GHz): ");printw("%12.6f",rfFinalLO);
-  move(7,2);
+  move(7,1);
   printLabel("LO_PAD(63 is Max att):  ");printw("%s",rfCaba3AttLevel);
 
-  move(9,2);
+  move(9,1);
   printBold("========== Signal select ===========");
-  move(10,2);
+  move(10,1);
   printLabel("Receiver: ");printw("%s",rfCaba1Rcvr);
-  move(11,2);
+  move(11,1);
   printLabel("Sideband(for Tsys/Cont.Det ): ");printw("%s",rfCaba11Sb);
-  move(12,2);
+  move(12,1);
   printLabel("Polarization(for Phase monitor): ");printw("%s",rfCaba11Pol);
 
 
-  move(15,2);
+  move(15,1);
   printBold("======== Tone & Load Motor =========");
-  move(16,2);
+  move(16,1);
   printLabel("Tone Source: ");printw("%s",rfCaba1Rcvr);
-  move(17,2);
+  move(17,1);
   printLabel("Tone Position: ");printw("%s",rfCaba1Toneval);
-  move(18,2);
+  move(18,1);
   printLabel("LHC_Cont. Powwer(mv): ");printw("%s",wacko);
-  move(19,2);
+  move(19,1);
   printLabel("RHC_Cont. Powwer(mv): ");printw("%s",wacko);
-  move(20,2);
+  move(20,1);
   printLabel("PM#5_RHC/POL0(dBm) ");printw("%s",wacko);
-  move(21,2);
+  move(21,1);
   printLabel("PM#5_LHC/POL1(dBm) ");printw("%s",wacko);
 
 
-  move(3,46);
+  move(3,44);
   printBold("====== Temp and Vacuum ======");
-  move(4,46);
+  move(4,44);
   printLabel("Coldhead(K) :    ");printw("%4.1f",rfCryostatColdhead);
-  move(5,46);
+  move(5,44);
   printLabel("4K_temp(K)  :    ");printw("%4.1f",rfCryostatPlate4K);
-  move(6,46);
+  move(6,44);
   printLabel("15K_temp(K) :    ");printw("%4.1f",rfCryostatPlate15K);
-  move(7,46);
+  move(7,44);
   printLabel("100K_temp(K):    ");printw("%4.1f",rfCryostatPlate100);
-  move(8,46);
+  move(8,44);
   printLabel("Ambient(K)  :    ");printw("%4.1f",rfCryostatAmbTemp);
-  move(9,46);
+  move(9,44);
   printLabel("Dewar_pressure:  ");printw("%s",wacko);
-  move(10,46);
+  move(10,44);
   printLabel("Pump_pressure :  ");printw("%s",wacko);
 
-  move(12,46);
+  move(12,44);
   printBold("====== Various LO Status =======");
-  move(13,46);
+  move(13,44);
   printLabel("PhotonicsRx_10MHz:  ");printw("%s",wacko);
-  move(14,46);
+  move(14,44);
   printLabel("A1-31.5MHz_FLOOG (5V Lock): ");printw("%s",rfCaba1FloogLock);
-  move(15,46);
+  move(15,44);
   printLabel("A1-0.5/1.5GHz_Valon(3.5V lock): ");printw("%s",rfCaba1ValonLock);
-  move(16,46);
+  move(16,44);
   printLabel("BackendRef_2.048 GHz(5V Lock): ");printw("%s",wacko);
-  move(17,46);
+  move(17,44);
   printLabel("BackendRef_3.85  GHz(5V Lock): ");printw("%s",wacko);
-  move(18,46);
+  move(18,44);
   printLabel("BackendRef_8.15  GHz(5V Lock): ");printw("%s",wacko);
-  move(19,46);
+  move(19,44);
   printLabel("A11-5.95 GHz(5V Lock): ");printw("%s",wacko);
-  move(20,46);
+  move(20,44);
   printLabel("PhotonicsTx_15.75GHz ");printw("%s",wacko);
-  move(21,46);
+  move(21,44);
   printLabel("PhotonicsTx_15.76GHz ");printw("%s",wacko);
 
   refresh();
