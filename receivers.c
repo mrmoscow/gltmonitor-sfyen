@@ -137,13 +137,13 @@ void receiversPage(int count) {
   move(17,2);
   printLabel("Tone Position: ");printw("%s",rfCaba1Toneval);
   move(18,2);
-  printw("LHC_Cont. Powwer(mv): ");printw("%s",wacko);
+  printLabel("LHC_Cont. Powwer(mv): ");printw("%s",wacko);
   move(19,2);
-  printw("RHC_Cont. Powwer(mv): ");printw("%s",wacko);
+  printLabel("RHC_Cont. Powwer(mv): ");printw("%s",wacko);
   move(20,2);
-  printw("PM#5_RHC/POL0(dBm) ");printw("%s",wacko);
+  printLabel("PM#5_RHC/POL0(dBm) ");printw("%s",wacko);
   move(21,2);
-  printw("PM#5_LHC/POL1(dBm) ");printw("%s",wacko);
+  printLabel("PM#5_LHC/POL1(dBm) ");printw("%s",wacko);
 
 
   move(3,46);
@@ -168,21 +168,21 @@ void receiversPage(int count) {
   move(13,46);
   printLabel("PhotonicsRx_10MHz:  ");printw("%s",wacko);
   move(14,46);
-  printw("A1-31.5MHz_FLOOG (5V Lock): %s",rfCaba1FloogLock);
+  printLabel("A1-31.5MHz_FLOOG (5V Lock): ");printw("%s",rfCaba1FloogLock);
   move(15,46);
-  printw("A1-0.5/1.5GHz_Valon(3.5V lock): %s",rfCaba1ValonLock);
+  printLabel("A1-0.5/1.5GHz_Valon(3.5V lock): ");printw("%s",rfCaba1ValonLock);
   move(16,46);
-  printw("Backend_Ref_2.048GHz(5V Lock): %s",rfCaba1FloogLock);
+  printLabel("BackendRef_2.048 GHz(5V Lock): ");printw("%s",wacko);
   move(17,46);
-  printw("Backend_Ref_3.85 GHz(5V Lock): %s",rfCaba1FloogLock);
+  printLabel("BackendRef_3.85  GHz(5V Lock): ");printw("%s",wacko);
   move(18,46);
-  printw("Backend_Ref_8.15 GHz(5V Lock): %s",rfCaba1FloogLock);
+  printLabel("BackendRef_8.15  GHz(5V Lock): ");printw("%s",wacko);
   move(19,46);
-  printw("A11-5.95 GHz(5V Lock): %s",rfCaba1FloogLock);
+  printLabel("A11-5.95 GHz(5V Lock): ");printw("%s",wacko);
   move(20,46);
-  printw("PhotonicsTx_15.75GHz %s",wacko);
+  printLabel("PhotonicsTx_15.75GHz ");printw("%s",wacko);
   move(21,46);
-  printw("PhotonicsTx_15.76GHz %s",wacko);
+  printLabel("PhotonicsTx_15.76GHz ");printw("%s",wacko);
 
   refresh();
 }
