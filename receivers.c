@@ -45,7 +45,7 @@ void receiversPage(int count) {
   char rfLoadval[10];
   char rfTimestamp[15];
   char *wacko="wacko";
-
+  char *test1="1.0200E-06";
   if ((count % 20) == 1) {
     /*
       Initialize Curses Display
@@ -159,7 +159,7 @@ void receiversPage(int count) {
   move(8,44);
   printLabel("Ambient(K)  :    ");printw("%4.1f",rfCryostatAmbTemp);
   move(9,44);
-  printLabel("Dewar_pressure:  ");printw("%s",wacko);
+  printLabel("Dewar_pressure:  ");printw("%s",test1);
   move(10,44);
   printLabel("Pump_pressure :  ");printw("%s",wacko);
 
