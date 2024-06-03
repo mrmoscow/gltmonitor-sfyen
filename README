@@ -8,3 +8,7 @@ read from dsm (written by glttrack). The dsm reading works only on obscon.
 ====2024,May====
 by SFYen, commit all *.c and *.h, Make files,  into git (github).
 Will start to update the r page in gltmonitor
+
+todo
+1. The new DSM tesgin from Gltmal
+2. conda in 
