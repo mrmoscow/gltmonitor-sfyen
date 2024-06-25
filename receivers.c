@@ -46,7 +46,7 @@ void receiversPage(int count) {
   char rfTimestamp[15];
   char *wacko="wacko";
   char *test1="1.02E+3";
-  char pressureePume[7];
+  char pressurePump[7];
 
   if ((count % 20) == 1) {
     /*
@@ -103,7 +103,7 @@ void receiversPage(int count) {
   dsm_status = dsm_read(DSM_HOST,"DSM_RF_LOADVAL_C10",&rfLoadval,&timestamp);
   dsm_status = dsm_read(DSM_HOST,"DSM_RF_TIMESTAMP_C15",rfTimestamp,&timestamp);
 
-  dsm_status = dsm_read(DSM_HOST,"DSM_PUMP_PRESS_C7",pressureePume,&timestamp);
+  dsm_status = dsm_read(DSM_HOST,"DSM_PUMP_PRESS_C7",pressurePump,&timestamp);
 
   if (dsm_status != DSM_SUCCESS) {
   printf("Warning: DSM read failed! dsm_status=%d\n",dsm_status);
