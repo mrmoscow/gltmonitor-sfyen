@@ -46,7 +46,8 @@ void receiversPage(int count) {
   char rfTimestamp[15];
   char *wacko="wacko";
   char *test1="1.02E+3";
-  char pressurePump[7];
+  char pressureePume[7];
+
   if ((count % 20) == 1) {
     /*
       Initialize Curses Display
