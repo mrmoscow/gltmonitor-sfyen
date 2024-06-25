@@ -26,8 +26,8 @@ r = sv.recv(32).decode()
 print(r)
 #1.3600E+01 or 9.9800E-07 1.0200E-06  
 print('The vacuum of Dewar:',r[3:13],'  Pump:',r[17:27])
-dewar=r[3:6]+r[9:10]+r[12]
-pump=r[17:20]+r[23:24]+r[26]
+dewar=r[3:7]+r[9:11]+r[12]
+pump=r[17:21]+r[23:25]+r[26]
 print('The vacuum of Dewar:',dewar,'  Pump:',pump)
 #
 #subprocess.call(["/var/www/cgi-bin/GLT/write_char_DSM", 'DSM_PUMP_PRESS_C7', '2.03E-2']);
