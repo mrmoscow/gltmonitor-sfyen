@@ -45,7 +45,8 @@ void receiversPage(int count) {
   char rfLoadval[10];
   char rfTimestamp[15];
   char *wacko="wacko";
-  char *test1="1.0200E-06";
+  char *test1="1.02E+3";
+  char pressurePump[7];
   if ((count % 20) == 1) {
     /*
       Initialize Curses Display
@@ -101,6 +102,7 @@ void receiversPage(int count) {
   dsm_status = dsm_read(DSM_HOST,"DSM_RF_LOADVAL_C10",&rfLoadval,&timestamp);
   dsm_status = dsm_read(DSM_HOST,"DSM_RF_TIMESTAMP_C15",rfTimestamp,&timestamp);
 
+  dsm_status = dsm_read(DSM_HOST,"DSM_PUMP_PRESS_C7",pressureePume,&timestamp);
 
   if (dsm_status != DSM_SUCCESS) {
   printf("Warning: DSM read failed! dsm_status=%d\n",dsm_status);
@@ -146,42 +148,42 @@ void receiversPage(int count) {
   printLabel("PM#5_LHC/POL1(dBm) ");printw("%s",wacko);
 
 
-  move(3,44);
+  move(3,42);
   printBold("====== Temp and Vacuum ======");
-  move(4,44);
-  printLabel("Coldhead(K) :    ");printw("%4.1f",rfCryostatColdhead);
-  move(5,44);
-  printLabel("4K_temp(K)  :    ");printw("%4.1f",rfCryostatPlate4K);
-  move(6,44);
-  printLabel("15K_temp(K) :    ");printw("%4.1f",rfCryostatPlate15K);
-  move(7,44);
-  printLabel("100K_temp(K):    ");printw("%4.1f",rfCryostatPlate100);
-  move(8,44);
-  printLabel("Ambient(K)  :    ");printw("%4.1f",rfCryostatAmbTemp);
-  move(9,44);
-  printLabel("Dewar_pressure:  ");printw("%s",test1);
-  move(10,44);
-  printLabel("Pump_pressure :  ");printw("%s",wacko);
+  move(4,42);
+  printLabel("Coldhead(K) :   ");printw("%4.1f",rfCryostatColdhead);
+  move(5,42);
+  printLabel("4K_temp(K)  :   ");printw("%4.1f",rfCryostatPlate4K);
+  move(6,42);
+  printLabel("15K_temp(K) :   ");printw("%4.1f",rfCryostatPlate15K);
+  move(7,42);
+  printLabel("100K_temp(K):   ");printw("%4.1f",rfCryostatPlate100);
+  move(8,42);
+  printLabel("Ambient(K)  :   ");printw("%4.1f",rfCryostatAmbTemp);
+  move(9,42);
+  printLabel("Dewar_pressure: ");printw("%s",test1);
+  move(10,42);
+  printLabel("Pump_pressure : ");printw("%s",pressurePump);
 
-  move(12,44);
+  move(12,42);
   printBold("====== Various LO Status =======");
-  move(13,44);
+  move(13,42);
   printLabel("PhotonicsRx_10MHz:  ");printw("%s",wacko);
-  move(14,44);
+  move(14,42);
   printLabel("A1-31.5MHz_FLOOG (5V Lock): ");printw("%s",rfCaba1FloogLock);
-  move(15,44);
+  move(15,42);
   printLabel("A1-0.5/1.5GHz_Valon(3.5V lock): ");printw("%s",rfCaba1ValonLock);
-  move(16,44);
+  move(16,42);
   printLabel("BackendRef_2.048 GHz(5V Lock): ");printw("%s",wacko);
-  move(17,44);
+  move(17,42);
   printLabel("BackendRef_3.85  GHz(5V Lock): ");printw("%s",wacko);
-  move(18,44);
+  move(18,42);
   printLabel("BackendRef_8.15  GHz(5V Lock): ");printw("%s",wacko);
-  move(19,44);
+  move(19,42);
   printLabel("A11-5.95 GHz(5V Lock): ");printw("%s",wacko);
-  move(20,44);
+  move(20,42);
   printLabel("PhotonicsTx_15.75GHz ");printw("%s",wacko);
-  move(21,44);
+  move(21,42);
   printLabel("PhotonicsTx_15.76GHz ");printw("%s",wacko);
 
   refresh();
