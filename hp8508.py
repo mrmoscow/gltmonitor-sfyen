@@ -14,14 +14,17 @@ CR   = 0x0D
 ESC  = 0x1B
 PLUS = 0x2B
 
+#IP ofprologix  addr for GPIP setting
+ip="192.168.1.204"
+#addr="8"
+
 #for vvm in Taipei Lab
-ip="192.168.1.155"
-addr="25"
+#ip="192.168.1.204" #addr="8"
 
 #for vvm in Thule"  
-#ip="192.168.1.204" #addr="??"
+#ip="192.168.1.204" #addr="25"
 #ip="192.168.1.155" #addr="25"
-#ip="192.168.1.74"  #addr="25"
+#ip="192.168.1.74"  #addr="8"
 
 #==============================================================================
 def IsSpecial(data):
